@@ -30,9 +30,15 @@ scene.add(icosahedron2);
 function animate(){
   requestAnimationFrame(animate);
 
+  //first object animations
   icosahedron.rotation.x += 0.01;
   icosahedron.rotation.z += 0.01;
   icosahedron.rotation.y += 0.005;
+
+  icosahedron2.rotation.x += 0.01;
+  icosahedron2.rotation.z += 0.01;
+  icosahedron2.rotation.y += 0.005;
+  //second object animations
 
 
   renderer.render(scene, camera);
