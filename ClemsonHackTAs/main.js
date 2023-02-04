@@ -3,6 +3,7 @@ import './style.css'
 import * as THREE from 'three';
 import { IcosahedronGeometry } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 500);
@@ -18,8 +19,8 @@ camera.position.setY(35);
 
 
 
-const spaceBG = new THREE.TextureLoader().load("space.webp");
-const spaceNormal = new THREE.TextureLoader().load("spaceNormal.png");
+const spaceBG = new THREE.TextureLoader().load("allImages/space.webp");
+const spaceNormal = new THREE.TextureLoader().load("allImages/spaceNormal.png");
 scene.background = spaceBG;
 scene.normalMap = spaceNormal;
 
@@ -29,8 +30,8 @@ scene.normalMap = spaceNormal;
 // const icosahedron = new THREE.Mesh(geometry, material);
 
 //first object, fill
-const planetEarth = new THREE.TextureLoader().load("PlanetEarth.jpg");
-const planetEarthNormal = new THREE.TextureLoader().load("PlanetEarthNormal.jpg");
+const planetEarth = new THREE.TextureLoader().load("allImages/PlanetEarth.jpg");
+const planetEarthNormal = new THREE.TextureLoader().load("allImages/PlanetEarthNormal.jpg");
 
 const icosahedron2 = new THREE.Mesh(
   new THREE.IcosahedronGeometry(10,6), new THREE.MeshStandardMaterial({map: planetEarth, normalMap: planetEarthNormal})
@@ -38,11 +39,11 @@ const icosahedron2 = new THREE.Mesh(
 
 //second object
 const gltfLoader = new GLTFLoader();
-gltfLoader.load('fidgetBall.gltf', function (gltf) {
+gltfLoader.load('Models/fidgetBall.gltf', function (gltf) {
   const model = gltf.scene;
   model.scale.set(10, 10, 10);
   model.position.setZ(0);
-  const texture = new THREE.TextureLoader().load('fidgetBall.jpg');
+  const texture = new THREE.TextureLoader().load('allImages/fidgetBall.jpg');
   model.traverse(function (node) {
     if (node.isMesh) {
       node.material.map = texture;
@@ -51,7 +52,6 @@ gltfLoader.load('fidgetBall.gltf', function (gltf) {
   scene.add(model);
   renderer.render(scene,camera);
 });
-
 
 //lights
 const pointLight = new THREE.PointLight(0xAEAEAE);
@@ -77,6 +77,23 @@ function addStar(){
 }
 
 Array(300).fill().forEach(addStar);
+
+function moveCamera() {
+  const t = document.body.getBoundingClientRect().top;
+  moon.rotation.x += 0.05;
+  moon.rotation.y += 0.075;
+  moon.rotation.z += 0.05;
+
+  jeff.rotation.y += 0.01;
+  jeff.rotation.z += 0.01;
+
+  camera.position.z = t * -0.01;
+  camera.position.x = t * -0.0002;
+  camera.rotation.y = t * -0.0002;
+}
+
+document.body.onscroll = moveCamera;
+moveCamera();
 
 
 function animate(){
