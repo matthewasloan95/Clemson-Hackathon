@@ -17,6 +17,11 @@ camera.position.setY(35);
 
 renderer.render(scene,camera);
 
+const spaceBG = new THREE.TextureLoader().load("space.webp");
+const spaceNormal = new THREE.TextureLoader().load("spaceNormal.png");
+scene.background = spaceBG;
+scene.normalMap = spaceNormal;
+
 //first object, outline
 // const geometry = new THREE.IcosahedronGeometry(10,1);
 // const material = new THREE.MeshStandardMaterial({color: 0xFF3135, wireframe: true});
