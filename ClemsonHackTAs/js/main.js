@@ -14,7 +14,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth,window.innerHeight);
 camera.position.setZ(50);
-camera.position.setY(35);
+camera.position.setY(0);
 
 
 
@@ -40,8 +40,8 @@ const icosahedron2 = new THREE.Mesh(
 const gltfLoader = new GLTFLoader();
 gltfLoader.load('Models/fidgetBall.gltf', function (gltf) {
   const model = gltf.scene;
-  model.scale.set(10, 10, 10);
-  model.position.setZ(0);
+  model.scale.set(1, 1, 1);
+  model.position.setZ(-100);
   const texture = new THREE.TextureLoader().load('allImages/fidgetBall.jpg');
   model.traverse(function (node) {
     if (node.isMesh) {
@@ -49,7 +49,7 @@ gltfLoader.load('Models/fidgetBall.gltf', function (gltf) {
     }
   });
   scene.add(model);
-  renderer.render(scene,camera);
+  renderer.render(scene, camera);
 });
 
 //lights
@@ -58,6 +58,8 @@ const pointLight = new THREE.PointLight(0xAEAEAE);
 pointLight.position.y = 100;
 pointLight.position.x = 100;
 const ambientLight = new THREE.AmbientLight(0x3A3543);
+icosahedron2.position.setZ(-40);
+icosahedron2.position.x += 20;
 
 scene.add(ambientLight);
 scene.add(pointLight);
@@ -82,7 +84,7 @@ function moveCamera() {
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
-  camera.rotation.y = t * -0.0002;
+  camera.rotation.y = t *  -0.0002;
 }
 
 document.body.onscroll = moveCamera;
