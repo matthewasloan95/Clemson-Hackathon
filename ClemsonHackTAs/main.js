@@ -1,6 +1,7 @@
 import './style.css'
 
 import * as THREE from 'three';
+import { IcosahedronGeometry } from 'three';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 500);
@@ -17,13 +18,17 @@ camera.position.setY(35);
 renderer.render(scene,camera);
 
 //first object, outline
-const geometry = new THREE.IcosahedronGeometry(10,1);
-const material = new THREE.MeshStandardMaterial({color: 0xFF3135, wireframe: true});
-const icosahedron = new THREE.Mesh(geometry, material);
+// const geometry = new THREE.IcosahedronGeometry(10,1);
+// const material = new THREE.MeshStandardMaterial({color: 0xFF3135, wireframe: true});
+// const icosahedron = new THREE.Mesh(geometry, material);
+
 //first object, fill
-const geometry2 = new THREE.IcosahedronGeometry(10,1);
-const material2 = new THREE.MeshStandardMaterial({color: 0xAA3135});
-const icosahedron2 = new THREE.Mesh(geometry2, material2);
+const planetEarth = new THREE.TextureLoader().load("PlanetEarth.jpg");
+const planetEarthNormal = new THREE.TextureLoader().load("PlanetEarthNormal.jpg");
+
+const icosahedron2 = new THREE.Mesh(
+  new THREE.IcosahedronGeometry(10,6), new THREE.MeshStandardMaterial({map: planetEarth, normalMap: planetEarthNormal})
+  );
 
 //second object
 
@@ -38,7 +43,7 @@ const ambientLight = new THREE.AmbientLight(0x3A3543);
 
 scene.add(ambientLight);
 scene.add(pointLight);
-scene.add(icosahedron);
+//scene.add(icosahedron);
 scene.add(icosahedron2);
 
 function addStar(){
@@ -61,7 +66,7 @@ function animate(){
   //first object animations
   // icosahedron.rotation.x += 0.01;
   // icosahedron.rotation.z += 0.01;
-  icosahedron.rotation.y += 0.005;
+  //icosahedron.rotation.y += 0.005;
 
   // icosahedron2.rotation.x += 0.01;
   // icosahedron2.rotation.z += 0.01;
