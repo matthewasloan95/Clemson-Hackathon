@@ -2,6 +2,7 @@ import './style.css'
 
 import * as THREE from 'three';
 import { IcosahedronGeometry } from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 500);
@@ -15,7 +16,7 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 camera.position.setZ(50);
 camera.position.setY(35);
 
-renderer.render(scene,camera);
+
 
 const spaceBG = new THREE.TextureLoader().load("space.webp");
 const spaceNormal = new THREE.TextureLoader().load("spaceNormal.png");
@@ -36,7 +37,20 @@ const icosahedron2 = new THREE.Mesh(
   );
 
 //second object
-
+const gltfLoader = new GLTFLoader();
+gltfLoader.load('fidgetBall.gltf', function (gltf) {
+  const model = gltf.scene;
+  model.scale.set(10, 10, 10);
+  model.position.setZ(0);
+  const texture = new THREE.TextureLoader().load('fidgetBall.jpg');
+  model.traverse(function (node) {
+    if (node.isMesh) {
+      node.material.map = texture;
+    }
+  });
+  scene.add(model);
+  renderer.render(scene,camera);
+});
 
 
 //lights
