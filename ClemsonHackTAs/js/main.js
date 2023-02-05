@@ -109,6 +109,28 @@ Matt.position.z = 40;
 Matt.position.x = -11;
 Matt.position.y -= 1;
 
+// Mytien
+const geometry6 = new THREE.BoxGeometry(2, 2, 2);
+const texture6 = new THREE.TextureLoader().load('allImages/Mytien.jpg');
+const material6 = new THREE.MeshBasicMaterial({ map: texture6 });
+const Mytien = new THREE.Mesh(geometry6, material6);
+Mytien.position.z = 40;
+Mytien.position.x = -11;
+Mytien.position.y -= 1;
+
+
+
+// Matt
+const geometry7 = new THREE.BoxGeometry(2, 2, 2);
+const texture7 = new THREE.TextureLoader().load('allImages/Matt.jpg');
+const material7 = new THREE.MeshBasicMaterial({ map: texture7 });
+const Tim = new THREE.Mesh(geometry7, material7);
+Matt.position.z = 40;
+Matt.position.x = -11;
+Matt.position.y -= 1;
+
+scene.add(Matt);
+
 // Matt
 const geometry5 = new THREE.BoxGeometry(2, 2, 2);
 const texture5 = new THREE.TextureLoader().load('allImages/Matt.jpg');
@@ -119,6 +141,30 @@ Matt.position.x = -11;
 Matt.position.y -= 1;
 
 scene.add(Matt);
+
+// Matt
+const geometry5 = new THREE.BoxGeometry(2, 2, 2);
+const texture5 = new THREE.TextureLoader().load('allImages/Matt.jpg');
+const material5 = new THREE.MeshBasicMaterial({ map: texture4 });
+const Mytien = new THREE.Mesh(geometry4, material4);
+Matt.position.z = 40;
+Matt.position.x = -11;
+Matt.position.y -= 1;
+
+scene.add(Matt);
+
+// Matt
+const geometry5 = new THREE.BoxGeometry(2, 2, 2);
+const texture5 = new THREE.TextureLoader().load('allImages/Matt.jpg');
+const material5 = new THREE.MeshBasicMaterial({ map: texture4 });
+const Mytien = new THREE.Mesh(geometry4, material4);
+Matt.position.z = 40;
+Matt.position.x = -11;
+Matt.position.y -= 1;
+
+scene.add(Matt);
+scene.add(Mytien);
+
 scene.add(ambientLight);
 scene.add(pointLight);
 //scene.add(icosahedron);
