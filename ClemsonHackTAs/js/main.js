@@ -145,9 +145,8 @@ function animate(){
   // icosahedron2.rotation.z += 0.01;
   icosahedron2.rotation.y += 0.005;
 
-  globalScene.rotation.y -= 0.005;
-  globalScene.rotation.x += 0.01;
-
+  //globalScene.rotation.y -= 0.0005;
+  globalScene.rotation.y += 0.01;
 
   austronautReference.rotation.x += 0.01;
 
