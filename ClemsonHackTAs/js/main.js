@@ -120,51 +120,43 @@ Mytien.position.y -= 1;
 
 
 
-// Matt
+// Tim
 const geometry7 = new THREE.BoxGeometry(2, 2, 2);
-const texture7 = new THREE.TextureLoader().load('allImages/Matt.jpg');
+const texture7 = new THREE.TextureLoader().load('allImages/Tim.jpg');
 const material7 = new THREE.MeshBasicMaterial({ map: texture7 });
 const Tim = new THREE.Mesh(geometry7, material7);
-Matt.position.z = 40;
-Matt.position.x = -11;
-Matt.position.y -= 1;
+Tim.position.z = 40;
+Tim.position.x = -11;
+Tim.position.y -= 1;
 
 
 
-// Matt
-const geometry5 = new THREE.BoxGeometry(2, 2, 2);
-const texture5 = new THREE.TextureLoader().load('allImages/Matt.jpg');
-const material5 = new THREE.MeshBasicMaterial({ map: texture4 });
-const Mytien = new THREE.Mesh(geometry4, material4);
-Matt.position.z = 40;
-Matt.position.x = -11;
-Matt.position.y -= 1;
+// Rish
+const geometry8 = new THREE.BoxGeometry(2, 2, 2);
+const texture8 = new THREE.TextureLoader().load('allImages/Rish.jpg');
+const material8 = new THREE.MeshBasicMaterial({ map: texture8 });
+const Rish = new THREE.Mesh(geometry8, material8);
+Rish.position.z = 40;
+Rish.position.x = -11;
+Rish.position.y -= 1;
 
-scene.add(Matt);
 
-// Matt
-const geometry5 = new THREE.BoxGeometry(2, 2, 2);
-const texture5 = new THREE.TextureLoader().load('allImages/Matt.jpg');
-const material5 = new THREE.MeshBasicMaterial({ map: texture4 });
-const Mytien = new THREE.Mesh(geometry4, material4);
-Matt.position.z = 40;
-Matt.position.x = -11;
-Matt.position.y -= 1;
 
-scene.add(Matt);
+// Josh
+const geometry9 = new THREE.BoxGeometry(2, 2, 2);
+const texture9 = new THREE.TextureLoader().load('allImages/Josh.jpg');
+const material9 = new THREE.MeshBasicMaterial({ map: texture9 });
+const Josh = new THREE.Mesh(geometry9, material9);
+Josh.position.z = 40;
+Josh.position.x = -11;
+Josh.position.y -= 1;
 
-// Matt
-const geometry5 = new THREE.BoxGeometry(2, 2, 2);
-const texture5 = new THREE.TextureLoader().load('allImages/Matt.jpg');
-const material5 = new THREE.MeshBasicMaterial({ map: texture4 });
-const Mytien = new THREE.Mesh(geometry4, material4);
-Matt.position.z = 40;
-Matt.position.x = -11;
-Matt.position.y -= 1;
 
+scene.add(Josh);
 scene.add(Matt);
 scene.add(Mytien);
 scene.add(Tim);
+scene.add(Rish);
 
 scene.add(ambientLight);
 scene.add(pointLight);
@@ -227,5 +219,3 @@ function animate(){
 }
 
 animate();
-
-
