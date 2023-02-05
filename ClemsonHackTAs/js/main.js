@@ -33,9 +33,9 @@ const gltfLoader = new GLTFLoader();
 let austronautReference;
 gltfLoader.load("./hand_low_poly/scene.glTF", (gltfScene) => {
   gltfScene.scene.scale.set(3,3,3);
-  gltfScene.scene.position.y = 5;
-  gltfScene.scene.position.x = 40;
-  gltfScene.scene.position.z = -40;
+  gltfScene.scene.position.y = 10;
+  gltfScene.scene.position.x = 35;
+  gltfScene.scene.position.z = -35;
   gltfScene.scene.rotation.y = -0.5;
   gltfScene.scene.rotation.z = -0.5;
 
@@ -77,9 +77,9 @@ const gltfLoader3 = new GLTFLoader();
 
 gltfLoader3.load("./pool/inflatable_pool_float_ring_-_low_poly.glb", (gltfScene3) => {
   gltfScene3.scene.scale.set(10,10,10);
-  gltfScene3.scene.position.y = 12;
-  gltfScene3.scene.position.x = -50;
-  gltfScene3.scene.position.z = 0;
+  gltfScene3.scene.position.y = 0;
+  gltfScene3.scene.position.x = 0;
+  gltfScene3.scene.position.z = 10;
   gltfScene3.scene.rotation.z = -0.5;
 
   inflatableReference = gltfScene3.scene;
@@ -146,9 +146,9 @@ function animate(){
   icosahedron2.rotation.y += 0.005;
 
   //globalScene.rotation.y -= 0.0005;
-  globalScene.rotation.y += 0.01;
+  globalScene.rotation.y -= 0.01;
 
-  austronautReference.rotation.x += 0.01;
+  austronautReference.rotation.x -= 0.01;
 
   inflatableReference.rotation.x += 0.01;
 
