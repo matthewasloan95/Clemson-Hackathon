@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import { IcosahedronGeometry } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+//Camera, Scene, Render
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 2000);
 
@@ -16,41 +17,39 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 camera.position.setZ(50);
 camera.position.setY(0);
 
-
-
+//Background
 const spaceBG = new THREE.TextureLoader().load("allImages/space.webp");
-const spaceNormal = new THREE.TextureLoader().load("allImages/spaceNormal.png");
 scene.background = spaceBG;
-scene.normalMap = spaceNormal;
 
-//first object, outline
-// const geometry = new THREE.IcosahedronGeometry(10,1);
-// const material = new THREE.MeshStandardMaterial({color: 0xFF3135, wireframe: true});
-// const icosahedron = new THREE.Mesh(geometry, material);
-
-//first object, fill
+//Planet Earth
 const planetEarth = new THREE.TextureLoader().load("allImages/PlanetEarth.jpg");
 const planetEarthNormal = new THREE.TextureLoader().load("allImages/PlanetEarthNormal.jpg");
-
 const icosahedron2 = new THREE.Mesh(
   new THREE.IcosahedronGeometry(10,6), new THREE.MeshStandardMaterial({map: planetEarth, normalMap: planetEarthNormal})
   );
 
 //second object
 const gltfLoader = new GLTFLoader();
+let polyHandReference;
 gltfLoader.load("./hand_low_poly/scene.gltf", (gltfScene) => {
   gltfScene.scene.scale.set(0.1,0.1,0.1);
   gltfScene.scene.position.y = -50;
   gltfScene.scene.position.x = 20;
   gltfScene.scene.position.z = -35;
 
-  scene.add(gltfScene.scene);
+  polyHandReference = gltfScene.scene;
 
+  //calling method
+  addSceneToScene();
 });
 
-//second object
+function addSceneToScene() {
+  scene.add(polyHandReference);
+}
+
+//third object
+let globalScene;
 const gltfLoader2 = new GLTFLoader();
-let sceneObject;
 
 gltfLoader2.load("./head_phones/scene.gltf", (gltfScene2) => {
   gltfScene2.scene.scale.set(1,1,1);
@@ -58,11 +57,14 @@ gltfLoader2.load("./head_phones/scene.gltf", (gltfScene2) => {
   gltfScene2.scene.position.x = 0;
   gltfScene2.scene.position.z = -40;
 
-  sceneObject = gltfScene2.scene;
-  scene.add(gltfScene2.scene);
+  globalScene = gltfScene2.scene;
 
+  addSceneToScene2();
 });
 
+function addSceneToScene2() {
+  scene.add(globalScene);
+}
 
 //lights
 const pointLight = new THREE.PointLight(0xAEAEAE);
@@ -103,6 +105,7 @@ document.body.onscroll = moveCamera;
 moveCamera();
 
 
+
 function animate(){
   requestAnimationFrame(animate);
 
@@ -114,6 +117,10 @@ function animate(){
   // icosahedron2.rotation.x += 0.01;
   // icosahedron2.rotation.z += 0.01;
   icosahedron2.rotation.y += 0.005;
+
+  globalScene.rotation.y -= 0.01;
+
+  polyHandReference.rotation.x -= 0.01;
 
   //second object animations
 
