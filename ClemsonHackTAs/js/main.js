@@ -5,7 +5,7 @@ import { IcosahedronGeometry } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 2000);
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
@@ -38,9 +38,11 @@ const icosahedron2 = new THREE.Mesh(
 
 //second object
 const gltfLoader = new GLTFLoader();
-gltfLoader.load('.assets/low_poly_carrot/scene.gltf', (gltfScene) => {
-  gltfScene.scene.scale.set(10,10,10);
-  gltfScene.scene.position.setZ(10);
+gltfLoader.load("./hand_low_poly/scene.gltf", (gltfScene) => {
+  gltfScene.scene.scale.set(0.1,0.1,0.1);
+  gltfScene.scene.position.y = -50;
+  gltfScene.scene.position.x = 20;
+  gltfScene.scene.position.z = -35;
   scene.add(gltfScene.scene);
 });
 //lights
