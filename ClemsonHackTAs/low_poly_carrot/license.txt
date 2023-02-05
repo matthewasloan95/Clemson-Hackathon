@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly Carrot
+* source:	https://sketchfab.com/3d-models/low-poly-carrot-31df366e091a4e64b9b0cfc1afc0145d
+* author:	thepianomonster (https://sketchfab.com/thepianomonster)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly Carrot" (https://sketchfab.com/3d-models/low-poly-carrot-31df366e091a4e64b9b0cfc1afc0145d) by thepianomonster (https://sketchfab.com/thepianomonster) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

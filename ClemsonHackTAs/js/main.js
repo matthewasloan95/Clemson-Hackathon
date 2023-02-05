@@ -38,20 +38,11 @@ const icosahedron2 = new THREE.Mesh(
 
 //second object
 const gltfLoader = new GLTFLoader();
-gltfLoader.load('Models/fidgetBall.gltf', function (gltf) {
-  const model = gltf.scene;
-  model.scale.set(1, 1, 1);
-  model.position.setZ(-100);
-  const texture = new THREE.TextureLoader().load('allImages/fidgetBall.jpg');
-  model.traverse(function (node) {
-    if (node.isMesh) {
-      node.material.map = texture;
-    }
-  });
-  scene.add(model);
-  renderer.render(scene, camera);
+gltfLoader.load('.assets/low_poly_carrot/scene.gltf', (gltfScene) => {
+  gltfScene.scene.scale.set(10,10,10);
+  gltfScene.scene.position.setZ(10);
+  scene.add(gltfScene.scene);
 });
-
 //lights
 const pointLight = new THREE.PointLight(0xAEAEAE);
 //pointLight.position.x = ;
