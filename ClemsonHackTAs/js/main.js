@@ -106,7 +106,17 @@ const texture4 = new THREE.TextureLoader().load('allImages/Matt.jpg');
 const material4 = new THREE.MeshBasicMaterial({ map: texture4 });
 const Matt = new THREE.Mesh(geometry4, material4);
 Matt.position.z = 40;
-Matt.position.x = -10;
+Matt.position.x = -11;
+Matt.position.y -= 1;
+
+// Matt
+const geometry5 = new THREE.BoxGeometry(2, 2, 2);
+const texture5 = new THREE.TextureLoader().load('allImages/Matt.jpg');
+const material5 = new THREE.MeshBasicMaterial({ map: texture4 });
+const Mytien = new THREE.Mesh(geometry4, material4);
+Matt.position.z = 40;
+Matt.position.x = -11;
+Matt.position.y -= 1;
 
 scene.add(Matt);
 scene.add(ambientLight);
