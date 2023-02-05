@@ -129,7 +129,7 @@ Matt.position.z = 40;
 Matt.position.x = -11;
 Matt.position.y -= 1;
 
-scene.add(Matt);
+
 
 // Matt
 const geometry5 = new THREE.BoxGeometry(2, 2, 2);
@@ -164,6 +164,7 @@ Matt.position.y -= 1;
 
 scene.add(Matt);
 scene.add(Mytien);
+scene.add(Tim);
 
 scene.add(ambientLight);
 scene.add(pointLight);
