@@ -59,6 +59,7 @@ gltfLoader2.load("./head_phones/scene.gltf", (gltfScene2) => {
   gltfScene2.scene.position.y = 0;
   gltfScene2.scene.position.x = 20;
   gltfScene2.scene.position.z = -40;
+  
 
   globalScene = gltfScene2.scene;
 
@@ -79,7 +80,7 @@ gltfLoader3.load("./pool/inflatable_pool_float_ring_-_low_poly.glb", (gltfScene3
   gltfScene3.scene.position.y = 12;
   gltfScene3.scene.position.x = -50;
   gltfScene3.scene.position.z = 0;
-  gltfScene3.scene.rotation.
+  gltfScene3.scene.rotation.z = -0.5;
 
   inflatableReference = gltfScene3.scene;
 
@@ -104,6 +105,7 @@ scene.add(pointLight);
 //scene.add(icosahedron);
 scene.add(icosahedron2);
 
+//many stars function
 function addStar(){
   const geometry = new THREE.IcosahedronGeometry(0.5,3);
   const material = new THREE.MeshBasicMaterial({color: 0xAEAEAE});
@@ -117,6 +119,8 @@ function addStar(){
 
 Array(300).fill().forEach(addStar);
 
+
+//camera scroll
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
@@ -127,7 +131,6 @@ function moveCamera() {
 
 document.body.onscroll = moveCamera;
 moveCamera();
-
 
 
 function animate(){
@@ -142,7 +145,9 @@ function animate(){
   // icosahedron2.rotation.z += 0.01;
   icosahedron2.rotation.y += 0.005;
 
-  globalScene.rotation.y -= 0.01;
+  globalScene.rotation.y -= 0.005;
+  globalScene.rotation.x += 0.01;
+
 
   austronautReference.rotation.x += 0.01;
 
