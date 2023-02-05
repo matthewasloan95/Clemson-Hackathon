@@ -77,9 +77,9 @@ const gltfLoader3 = new GLTFLoader();
 
 gltfLoader3.load("./pool/inflatable_pool_float_ring_-_low_poly.glb", (gltfScene3) => {
   gltfScene3.scene.scale.set(10,10,10);
-  gltfScene3.scene.position.y = 0;
-  gltfScene3.scene.position.x = 0;
-  gltfScene3.scene.position.z = 10;
+  gltfScene3.scene.position.y = 10;
+  gltfScene3.scene.position.x = -10;
+  gltfScene3.scene.position.z = 0;
   gltfScene3.scene.rotation.z = -0.5;
 
   inflatableReference = gltfScene3.scene;
