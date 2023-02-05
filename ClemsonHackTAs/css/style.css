@@ -6,20 +6,81 @@ canvas {
 
 
 :root {
-  --dark-bg: rgba(15, 15, 15, 0.95);
+  --dark-bg: rgba(15, 15, 15, 0.821);
   --spacing: 350px;
+  --bruh: 200px;
 
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+
+
 body {
   overflow-x: hidden;
 }
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: #262626b0;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(113, 113, 113, 0.922);
+}
+ 
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 15px;
+  background-color: #26262695;
+}
+ 
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #cecbcb99;
+}
+
+::-moz-scrollbar {
+  width: 0.2em;
+  background-color: #F5F5F5;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: #cecbcb99;
+}
+
+::-moz-scrollbar-track {
+  -moz-box-shadow: inset 0 0 6px rgba(45, 45, 45, 0.401);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+::-moz-scrollbar-thumb:hover {
+  background-color: #555555;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-bg);
+  padding: 1rem;
+  color: white;
+  grid-column: 2 / span 12;
+  width: 150%;
+  position: absolute;
+  bottom: 0;
+  margin-left: -140px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
 main {
   width: 100vw;
-  color: white;
+  color: rgba(255, 255, 255, 0.91);
   z-index: 99;
   position: absolute;
   width: 100%;
@@ -58,7 +119,7 @@ canvas {
     background: var(--dark-bg);
     font-size: 1.25rem;
     line-height: 1.5;
-    margin-bottom: var(--spacing);
+    margin-bottom: var(--bruh);
   }
 
   blockquote {
@@ -69,8 +130,8 @@ canvas {
   }
 
   blockquote p {
-    color: black;
-    background-color: white;
+    color: rgb(255, 255, 255);
+    background-color: #000000cb;
     font-size: 4rem;
     display: inline;
     line-height: 1;

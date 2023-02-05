@@ -28,32 +28,35 @@ const icosahedron2 = new THREE.Mesh(
   new THREE.IcosahedronGeometry(10,6), new THREE.MeshStandardMaterial({map: planetEarth, normalMap: planetEarthNormal})
   );
 
-//second object
+//astronaut
 const gltfLoader = new GLTFLoader();
-let polyHandReference;
-gltfLoader.load("./hand_low_poly/scene.gltf", (gltfScene) => {
-  gltfScene.scene.scale.set(0.1,0.1,0.1);
-  gltfScene.scene.position.y = -50;
-  gltfScene.scene.position.x = 20;
-  gltfScene.scene.position.z = -35;
+let austronautReference;
+gltfLoader.load("./hand_low_poly/scene.glTF", (gltfScene) => {
+  gltfScene.scene.scale.set(3,3,3);
+  gltfScene.scene.position.y = 5;
+  gltfScene.scene.position.x = 40;
+  gltfScene.scene.position.z = -40;
+  gltfScene.scene.rotation.y = -0.5;
+  gltfScene.scene.rotation.z = -0.5;
 
-  polyHandReference = gltfScene.scene;
+  austronautReference = gltfScene.scene;
 
   //calling method
   addSceneToScene();
 });
 
 function addSceneToScene() {
-  scene.add(polyHandReference);
+  scene.add(austronautReference);
 }
 
-//third object
+
+//moon
 let globalScene;
 const gltfLoader2 = new GLTFLoader();
 
 gltfLoader2.load("./head_phones/scene.gltf", (gltfScene2) => {
-  gltfScene2.scene.scale.set(1,1,1);
-  gltfScene2.scene.position.y = 0;
+  gltfScene2.scene.scale.set(5,5,5);
+  gltfScene2.scene.position.y = 12;
   gltfScene2.scene.position.x = 0;
   gltfScene2.scene.position.z = -40;
 
@@ -64,6 +67,25 @@ gltfLoader2.load("./head_phones/scene.gltf", (gltfScene2) => {
 
 function addSceneToScene2() {
   scene.add(globalScene);
+}
+
+//moon
+let brainReference;
+const gltfLoader3 = new GLTFLoader();
+
+gltfLoader3.load("./head_phones/scene.gltf", (gltfScene3) => {
+  gltfScene3.scene.scale.set(5,5,5);
+  gltfScene3.scene.position.y = 12;
+  gltfScene3.scene.position.x = 0;
+  gltfScene3.scene.position.z = -40;
+
+  brainReference = gltfScene3.scene;
+
+  addSceneToScene3();
+});
+
+function addSceneToScene3() {
+  scene.add(brainReference);
 }
 
 //lights
@@ -120,7 +142,7 @@ function animate(){
 
   globalScene.rotation.y -= 0.01;
 
-  polyHandReference.rotation.x -= 0.01;
+  austronautReference.rotation.x += 0.01;
 
   //second object animations
 
