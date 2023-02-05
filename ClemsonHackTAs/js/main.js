@@ -55,9 +55,9 @@ let globalScene;
 const gltfLoader2 = new GLTFLoader();
 
 gltfLoader2.load("./head_phones/scene.gltf", (gltfScene2) => {
-  gltfScene2.scene.scale.set(5,5,5);
-  gltfScene2.scene.position.y = 12;
-  gltfScene2.scene.position.x = 0;
+  gltfScene2.scene.scale.set(0.1,0.1,0.1);
+  gltfScene2.scene.position.y = 0;
+  gltfScene2.scene.position.x = 20;
   gltfScene2.scene.position.z = -40;
 
   globalScene = gltfScene2.scene;
@@ -69,23 +69,25 @@ function addSceneToScene2() {
   scene.add(globalScene);
 }
 
-//moon
-let brainReference;
+//inflatable
+//"Inflatable Pool Float Ring - Low Poly" (https://skfb.ly/ourBY) by Styro is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+let inflatableReference;
 const gltfLoader3 = new GLTFLoader();
 
-gltfLoader3.load("./head_phones/scene.gltf", (gltfScene3) => {
-  gltfScene3.scene.scale.set(5,5,5);
+gltfLoader3.load("./pool/inflatable_pool_float_ring_-_low_poly.glb", (gltfScene3) => {
+  gltfScene3.scene.scale.set(10,10,10);
   gltfScene3.scene.position.y = 12;
-  gltfScene3.scene.position.x = 0;
-  gltfScene3.scene.position.z = -40;
+  gltfScene3.scene.position.x = -50;
+  gltfScene3.scene.position.z = 0;
+  gltfScene3.scene.rotation.z = -0.5;
 
-  brainReference = gltfScene3.scene;
+  inflatableReference = gltfScene3.scene;
 
   addSceneToScene3();
 });
 
 function addSceneToScene3() {
-  scene.add(brainReference);
+  scene.add(inflatableReference);
 }
 
 //lights
@@ -143,6 +145,8 @@ function animate(){
   globalScene.rotation.y -= 0.01;
 
   austronautReference.rotation.x += 0.01;
+
+  inflatableReference.rotation.x += 0.01;
 
   //second object animations
 
