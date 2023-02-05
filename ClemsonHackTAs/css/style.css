@@ -28,6 +28,10 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
+a {
+  font-weight: 700;
+}
+
 body {
   overflow-x: hidden;
 }

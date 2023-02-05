@@ -107,16 +107,16 @@ const material4 = new THREE.MeshBasicMaterial({ map: texture4 });
 const Matt = new THREE.Mesh(geometry4, material4);
 Matt.position.z = 40;
 Matt.position.x = -11;
-Matt.position.y -= 1;
+Matt.position.y -= 0;
 
 // Mytien
 const geometry6 = new THREE.BoxGeometry(2, 2, 2);
 const texture6 = new THREE.TextureLoader().load('allImages/Mytien.jpg');
 const material6 = new THREE.MeshBasicMaterial({ map: texture6 });
 const Mytien = new THREE.Mesh(geometry6, material6);
-Mytien.position.z = 40;
-Mytien.position.x = -11;
-Mytien.position.y -= 1;
+Mytien.position.z = 35;
+Mytien.position.x = -7;
+Mytien.position.y -= 3.5;
 
 
 
@@ -125,9 +125,9 @@ const geometry7 = new THREE.BoxGeometry(2, 2, 2);
 const texture7 = new THREE.TextureLoader().load('allImages/Tim.jpg');
 const material7 = new THREE.MeshBasicMaterial({ map: texture7 });
 const Tim = new THREE.Mesh(geometry7, material7);
-Tim.position.z = 40;
-Tim.position.x = -11;
-Tim.position.y -= 1;
+Tim.position.z = 35;
+Tim.position.x = -7;
+Tim.position.y -= 0;
 
 
 
@@ -138,7 +138,7 @@ const material8 = new THREE.MeshBasicMaterial({ map: texture8 });
 const Rish = new THREE.Mesh(geometry8, material8);
 Rish.position.z = 40;
 Rish.position.x = -11;
-Rish.position.y -= 1;
+Rish.position.y -= 3.5;
 
 
 
@@ -147,8 +147,8 @@ const geometry9 = new THREE.BoxGeometry(2, 2, 2);
 const texture9 = new THREE.TextureLoader().load('allImages/Josh.jpg');
 const material9 = new THREE.MeshBasicMaterial({ map: texture9 });
 const Josh = new THREE.Mesh(geometry9, material9);
-Josh.position.z = 40;
-Josh.position.x = -11;
+Josh.position.z = 30;
+Josh.position.x = -3;
 Josh.position.y -= 1;
 
 
