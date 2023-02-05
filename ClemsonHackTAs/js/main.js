@@ -212,6 +212,18 @@ function animate(){
 
   Matt.rotation.y += 0.01;
   Matt.rotation.x += 0.01;
+  
+  Mytien.rotation.y += 0.01;
+  Mytien.rotation.x += 0.01;
+
+  Rish.rotation.y += 0.01;
+  Rish.rotation.x += 0.01;
+
+  Tim.rotation.y += 0.01;
+  Tim.rotation.x += 0.01;
+
+  Josh.rotation.y += 0.01;
+  Josh.rotation.x += 0.01;
 
   //second object animations
 
