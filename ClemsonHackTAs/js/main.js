@@ -101,12 +101,12 @@ icosahedron2.position.setZ(-40);
 icosahedron2.position.x += 20;
 
 // Matt
-const geometry4 = new THREE.BoxGeometry(5, 5, 5);
+const geometry4 = new THREE.BoxGeometry(2, 2, 2);
 const texture4 = new THREE.TextureLoader().load('allImages/Matt.jpg');
 const material4 = new THREE.MeshBasicMaterial({ map: texture4 });
 const Matt = new THREE.Mesh(geometry4, material4);
-Matt.position.z = 50;
-Matt.position.x = -20;
+Matt.position.z = 40;
+Matt.position.x = -10;
 
 scene.add(Matt);
 scene.add(ambientLight);
