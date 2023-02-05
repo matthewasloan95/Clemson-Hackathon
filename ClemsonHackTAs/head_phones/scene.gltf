@@ -1,0 +1,546 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        1.0005799531936646,
+        0.9975299835205078,
+        0.9523699879646301
+      ],
+      "min": [
+        -1.0,
+        -0.12037999927997589,
+        0.5210400223731995
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 768,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        0.7945646047592163,
+        0.9997444152832031,
+        0.8031721711158752
+      ],
+      "min": [
+        -0.7961575984954834,
+        -0.6569783091545105,
+        -0.7784643769264221
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 348,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1536,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        0.8942899703979492,
+        -0.24176999926567078,
+        0.9259200096130371
+      ],
+      "min": [
+        -0.8966000080108643,
+        -0.6387500166893005,
+        0.5282099843025208
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1920,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        0.8675253391265869,
+        0.6234771609306335,
+        0.5518830418586731
+      ],
+      "min": [
+        -0.8797205686569214,
+        -0.49739307165145874,
+        -0.5518830418586731
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1392,
+      "componentType": 5125,
+      "count": 84,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2304,
+      "componentType": 5126,
+      "count": 134,
+      "max": [
+        1.152959942817688,
+        0.9990100264549255,
+        1.120069980621338
+      ],
+      "min": [
+        -1.1572799682617188,
+        -0.8398200273513794,
+        0.33406999707221985
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 3912,
+      "componentType": 5126,
+      "count": 134,
+      "max": [
+        0.9956127405166626,
+        0.9999879002571106,
+        0.9452425241470337
+      ],
+      "min": [
+        -0.9925925135612488,
+        -0.9241364002227783,
+        -0.9452425241470337
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1728,
+      "componentType": 5125,
+      "count": 588,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5520,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        1.152959942817688,
+        -0.30981001257896423,
+        0.8711000084877014
+      ],
+      "min": [
+        -1.1572799682617188,
+        -0.6020100116729736,
+        0.5830399990081787
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5904,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        0.9956127405166626,
+        0.12149153649806976,
+        0.19239194691181183
+      ],
+      "min": [
+        -0.9925925135612488,
+        -0.28864213824272156,
+        -0.19239194691181183
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 4080,
+      "componentType": 5125,
+      "count": 84,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 6288,
+      "componentType": 5126,
+      "count": 60,
+      "max": [
+        0.9978399872779846,
+        -0.11580000072717667,
+        1.0811400413513184
+      ],
+      "min": [
+        -0.9966599941253662,
+        -0.7991600036621094,
+        0.37299999594688416
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 7008,
+      "componentType": 5126,
+      "count": 60,
+      "max": [
+        0.5398222208023071,
+        0.7720462083816528,
+        0.9492652416229248
+      ],
+      "min": [
+        -0.558872640132904,
+        -0.9698973298072815,
+        -0.9492652416229248
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 4416,
+      "componentType": 5125,
+      "count": 168,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 7728,
+      "componentType": 5126,
+      "count": 224,
+      "max": [
+        0.9508399963378906,
+        -0.0321200005710125,
+        1.1319400072097778
+      ],
+      "min": [
+        -0.9488099813461304,
+        -0.8411800265312195,
+        0.3222000002861023
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 10416,
+      "componentType": 5126,
+      "count": 224,
+      "max": [
+        0.9918256402015686,
+        0.9922295808792114,
+        0.9973337650299072
+      ],
+      "min": [
+        -0.9946116209030151,
+        -0.9999991059303284,
+        -0.9973337650299072
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 5088,
+      "componentType": 5125,
+      "count": 1152,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "VioletBoom (https://sketchfab.com/violetboom)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/head-phones-3fbb173debcc490bb4a7959dcb0b5c73",
+      "title": "Head Phones"
+    },
+    "generator": "Sketchfab-12.65.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 9696,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13104,
+      "byteOffset": 9696,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 22800,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Material.001",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.178773433,
+          0.178773433,
+          0.178773433,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material.006",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.3972208202,
+          0.3955585659,
+          0.3905958831,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material.002",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5457155108,
+          0.0060167005,
+          0.5450153351,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material.005",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.1266580075,
+          0.0018936275,
+          0.216519013,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material.003",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.1412591636,
+          0.1412591636,
+          0.1412591636,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material.004",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0277181901,
+          0.0277181901,
+          0.0277181901,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "head phones_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "head phones_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 4,
+            "POSITION": 3
+          },
+          "indices": 5,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "head phones_2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6
+          },
+          "indices": 8,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "head phones_3",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9
+          },
+          "indices": 11,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "head phones_4",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 13,
+            "POSITION": 12
+          },
+          "indices": 14,
+          "material": 4,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "head phones_5",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 16,
+            "POSITION": 15
+          },
+          "indices": 17,
+          "material": 5,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "Root"
+    },
+    {
+      "children": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "matrix": [
+        5.5980799999999995,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        6.75808,
+        0.0,
+        0.0,
+        -6.75808,
+        -0.0,
+        0.0,
+        0.0,
+        4.913600000000001,
+        4.95474,
+        1.0
+      ],
+      "name": "head phones"
+    },
+    {
+      "mesh": 0,
+      "name": "head phones_0"
+    },
+    {
+      "mesh": 1,
+      "name": "head phones_1"
+    },
+    {
+      "mesh": 2,
+      "name": "head phones_2"
+    },
+    {
+      "mesh": 3,
+      "name": "head phones_3"
+    },
+    {
+      "mesh": 4,
+      "name": "head phones_4"
+    },
+    {
+      "mesh": 5,
+      "name": "head phones_5"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

@@ -43,8 +43,27 @@ gltfLoader.load("./hand_low_poly/scene.gltf", (gltfScene) => {
   gltfScene.scene.position.y = -50;
   gltfScene.scene.position.x = 20;
   gltfScene.scene.position.z = -35;
+
   scene.add(gltfScene.scene);
+
 });
+
+//second object
+const gltfLoader2 = new GLTFLoader();
+let sceneObject;
+
+gltfLoader2.load("./head_phones/scene.gltf", (gltfScene2) => {
+  gltfScene2.scene.scale.set(1,1,1);
+  gltfScene2.scene.position.y = 0;
+  gltfScene2.scene.position.x = 0;
+  gltfScene2.scene.position.z = -40;
+
+  sceneObject = gltfScene2.scene;
+  scene.add(gltfScene2.scene);
+
+});
+
+
 //lights
 const pointLight = new THREE.PointLight(0xAEAEAE);
 //pointLight.position.x = ;
@@ -96,11 +115,11 @@ function animate(){
   // icosahedron2.rotation.z += 0.01;
   icosahedron2.rotation.y += 0.005;
 
-
   //second object animations
-
 
   renderer.render(scene, camera);
 }
 
 animate();
+
+
