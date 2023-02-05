@@ -100,6 +100,15 @@ const ambientLight = new THREE.AmbientLight(0x3A3543);
 icosahedron2.position.setZ(-40);
 icosahedron2.position.x += 20;
 
+// Matt
+const geometry4 = new THREE.BoxGeometry(5, 5, 5);
+const texture4 = new THREE.TextureLoader().load('allImages/Matt.jpg');
+const material4 = new THREE.MeshBasicMaterial({ map: texture4 });
+const Matt = new THREE.Mesh(geometry4, material4);
+Matt.position.z = 50;
+Matt.position.x = -20;
+
+scene.add(Matt);
 scene.add(ambientLight);
 scene.add(pointLight);
 //scene.add(icosahedron);
@@ -151,6 +160,9 @@ function animate(){
   austronautReference.rotation.x -= 0.01;
 
   inflatableReference.rotation.x += 0.01;
+
+  Matt.rotation.y += 0.01;
+  Matt.rotation.x += 0.01;
 
   //second object animations
 
